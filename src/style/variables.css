@@ -1,0 +1,19 @@
+:root {
+   --lime: #d8db2f;
+   --white: #fff;
+   --red: #d73328;
+   --slate-900: #133041;
+   --slate-700: #4e6e7e;
+   --slate-500: #6b94a8;
+   --slate-300: #9abed5;
+   --slate-100: #e4f4fd;
+
+   --font-family: "Plus Jakarta Sans", sans-serif;
+
+   --spacing-500: 2.5rem;
+   --spacing-400: 2rem;
+   --spacing-300: 1.5rem;
+   --spacing-200: 1rem;
+   --spacing-150: .75rem;
+   --spacing-100: .5rem;
+}
