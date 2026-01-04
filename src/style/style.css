@@ -146,3 +146,14 @@ fieldset {
 }
 
 /*    Result   */
+
+.result {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: var(--spacing-200);
+
+   padding: var(--spacing-400) var(--spacing-300);
+
+   background-color: var(--slate-900);
+}
