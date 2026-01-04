@@ -1,0 +1,15 @@
+.btn {
+   display: flex;
+   gap: var(--spacing-150);
+
+   padding: var(--spacing-200) var(--spacing-500);
+   border-radius: 50rem;
+   background-color: var(--lime);
+
+   color: var(--slate-900);
+}
+
+.btn-link {
+   display: inline;
+   text-decoration: underline;
+}
