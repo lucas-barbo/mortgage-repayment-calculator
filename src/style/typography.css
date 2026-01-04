@@ -43,3 +43,9 @@
 .text--lime {
    color: var(--lime);
 }
+
+@media (width >= 64rem) {
+   .text--1 {
+      font-size: 3.5rem;
+   }
+}
