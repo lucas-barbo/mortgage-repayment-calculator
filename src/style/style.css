@@ -75,6 +75,7 @@ fieldset {
 }
 
 .calculator__input__box {
+   overflow: hidden;
    display: flex;
    align-items: center;
    flex-wrap: nowrap;
@@ -91,6 +92,18 @@ fieldset {
 
    padding-inline: var(--spacing-200);
    border: none;
+}
+
+.calculator__input:focus {
+   outline: none;
+}
+
+.calculator__input__box:has(.calculator__input:focus) {
+   outline-color: var(--lime);
+}
+
+.calculator__input__box:has(.calculator__input:focus) .calculator__input__name {
+   color: var(--slate-900);
 }
 
 .calculator__input[type="radio"] {
@@ -141,6 +154,7 @@ fieldset {
 
 .calculator__input__name {
    display: block;
+   height: 100%;
 
    padding: var(--spacing-150) var(--spacing-200);
    background-color: var(--slate-100);
