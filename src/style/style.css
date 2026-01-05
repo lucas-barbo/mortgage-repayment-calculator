@@ -178,7 +178,7 @@ fieldset {
    background-color: var(--slate-900);
 
    & img {
-      margin: auto;
+      margin-inline: auto;
    }
 }
 
