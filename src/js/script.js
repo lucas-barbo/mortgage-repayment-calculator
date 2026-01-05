@@ -1,6 +1,8 @@
 const sectionResult = document.querySelector("#result")
 const form = document.querySelector("#form")
 
+window.onload = waitResult()
+
 form.onsubmit = (event) => {
    event.preventDefault()
    console.log("Submit")
@@ -45,6 +47,8 @@ function calculateRepayments(amount, term, rate, type) {
    monthlyRepayments = formatCurrency(Number(monthlyRepayments.toFixed(2)))
    totalRepayments = formatCurrency(Number(totalRepayments.toFixed(2)))
 
+   showResult(monthlyRepayments, totalRepayments)
+
    console.log("resultado: " + monthlyRepayments)
 }
 
@@ -55,18 +59,22 @@ function formatCurrency(value) {
    }).format(value)
 }
 
-let waitText = `
-<img src="src/img/calculator-mortgage.svg" alt="">
-<h2 class="text--2 text--white text--center">Results shown here</h2>
-<p class="text--slate-300 text--center">Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>`
+function showResult(monthly, total) {
+   sectionResult.innerHTML = `
+      <h2 class="text--2 text--white">Your results</h2>
+      <p class="result__text text--slate-300">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+      <article class="result__box">
+         <p class="text--slate-300">Your monthly repayments</p>
+         <span class="text--1 text--lime">${monthly}</span>
+         <div></div>
+         <p class="text--slate-300">Total you'll repay over the term</p>
+         <span class="text--2 text--white">${total}</span>
+      </article>`
+}
 
-let resultText = `
-<h2 class="text--2 text--white">Your results</h2>
-<p class="result__text text--slate-300">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
-<article class="result__box">
-   <p class="text--slate-300">Your monthly repayments</p>
-   <span class="text--1 text--lime">1,797.74</span>
-   <div></div>
-   <p class="text--slate-300">Total you'll repay over the term</p>
-   <span class="text--2 text--white">539,322.94</span>
-</article>`
+function waitResult() {
+   sectionResult.innerHTML = `
+      <img src="src/img/calculator-mortgage.svg" alt="">
+      <h2 class="text--2 text--white text--center">Results shown here</h2>
+      <p class="text--slate-300 text--center">Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>`
+}
