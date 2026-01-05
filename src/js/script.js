@@ -3,6 +3,11 @@ const form = document.querySelector("#form")
 
 window.onload = waitResult()
 
+function clearForm() {
+   form.reset()
+   waitResult()
+}
+
 form.onsubmit = (event) => {
    event.preventDefault()
    console.log("Submit")
