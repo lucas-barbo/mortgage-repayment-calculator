@@ -6,9 +6,9 @@ waitResult()
 form.onsubmit = (event) => {
    event.preventDefault()
 
-   const mortgageAmount = parseFloat(document.querySelector("#amount").value)
-   const mortgageTerm = parseFloat(document.querySelector("#term").value)
-   const interestRate = parseFloat(document.querySelector("#rate").value)
+   const mortgageAmount = Number(document.querySelector("#amount").value)
+   const mortgageTerm = Number(document.querySelector("#term").value)
+   const interestRate = Number(document.querySelector("#rate").value)
 
    const mortgageTypes = Array.from(document.querySelectorAll(".form__radio"))
    const mortgageType = whatMortgageType(mortgageTypes)
@@ -17,13 +17,11 @@ form.onsubmit = (event) => {
 }
 
 function whatMortgageType(radios) {
-   let valueRadio
-
-   radios.forEach(radio => {
-      valueRadio = radio.checked ? radio.value : valueRadio
-   })
-
-   return valueRadio
+   for (const radio of radios) {
+      if (radio.checked) {
+         return radio.value
+      }
+   }
 }
 
 function calculateRepayments(amount, term, rate, type) {
