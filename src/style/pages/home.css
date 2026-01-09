@@ -91,6 +91,10 @@
       padding: var(--spacing-500);
    }
 
+   .result__text {
+      margin-bottom: var(--spacing-300);
+   }
+
    .result__box {
       padding: var(--spacing-400);
    }

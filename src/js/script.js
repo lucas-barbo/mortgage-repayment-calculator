@@ -61,13 +61,13 @@ function formatCurrency(value) {
 
 function showResult(monthly, total) {
    sectionResult.innerHTML = `
-      <h2 class="result__title text--2 text--white">Your results</h2>
-      <p class="result__text text--slate-300">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+      <h2 class="result__title text--2 text--white">Seus resultados</h2>
+      <p class="result__text text--slate-300">Os seus resultados são apresentados abaixo com base nas informações que forneceu. Para ajustar os resultados, edite o formulário e clique novamente em “calcular reembolsos”.</p>
       <article class="result__box">
-         <p class="text--slate-300">Your monthly repayments</p>
+         <p class="text--slate-300">Seus pagamentos mensais</p>
          <span class="text--1 text--lime">${monthly}</span>
          <hr class="result__div">
-         <p class="text--slate-300">Total you'll repay over the term</p>
+         <p class="text--slate-300">Total que você pagará ao longo do prazo</p>
          <span class="text--2 text--white">${total}</span>
       </article>`
 }
