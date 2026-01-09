@@ -1,20 +1,17 @@
 const sectionResult = document.querySelector("#result")
 const form = document.querySelector("#form")
 
-window.onload = showResult()
+waitResult()
 
 form.onsubmit = (event) => {
    event.preventDefault()
-   console.log("Submit")
 
-   let mortgageAmount = document.querySelector("#amount").value
-   let mortgageTerm = document.querySelector("#term").value
-   let interestRate = document.querySelector("#rate").value
+   const mortgageAmount = parseFloat(document.querySelector("#amount").value)
+   const mortgageTerm = parseFloat(document.querySelector("#term").value)
+   const interestRate = parseFloat(document.querySelector("#rate").value)
 
-   let mortgageTypes = document.getElementsByName("type")
-   let mortgageType = whatMortgageType(mortgageTypes)
-
-   console.log(mortgageAmount, mortgageTerm, interestRate, mortgageType)
+   const mortgageTypes = Array.from(document.querySelectorAll(".form__radio"))
+   const mortgageType = whatMortgageType(mortgageTypes)
 
    calculateRepayments(mortgageAmount, mortgageTerm, interestRate, mortgageType)
 }
@@ -48,8 +45,6 @@ function calculateRepayments(amount, term, rate, type) {
    totalRepayments = formatCurrency(Number(totalRepayments.toFixed(2)))
 
    showResult(monthlyRepayments, totalRepayments)
-
-   console.log("resultado: " + monthlyRepayments)
 }
 
 function formatCurrency(value) {
