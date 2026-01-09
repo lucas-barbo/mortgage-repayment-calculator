@@ -38,28 +38,28 @@
             <fieldset class="form__fieldset form__fieldset--100-50">
                <legend class="form__legend">Prazo da hipoteca</legend>
                <div class="form__input-box">
+                  <label for="term" class="form__label form__label--intern form__label--dir">anos</label>
                   <input type="number" required id="term" class="form__input">
-                  <label for="term" class="form__label form__label--intern">anos</label>
                </div>
             </fieldset>
 
             <fieldset class="form__fieldset form__fieldset--100-50">
                <legend class="form__legend">Taxa de juro</legend>
                <div class="form__input-box">
+                  <label for="rate" class="form__label form__label--intern form__label--dir">%</label>
                   <input type="number" step="any" required id="rate" class="form__input">
-                  <label for="rate" class="form__label form__label--intern">%</label>
                </div>
             </fieldset>
 
             <fieldset class="form__fieldset">
                <legend class="form__legend">Tipo de hipoteca</legend>
                <div class="form__input-box">
+                  <label for="repayment" class="form__label form__label--extern form__label--dir">Reembolso</label>
                   <input type="radio" name="type" value="repayment" required id="repayment" class="form__radio">
-                  <label for="repayment" class="form__label form__label--extern">Reembolso</label>
                </div>
                <div class="form__input-box">
+                  <label for="interest" class="form__label form__label--extern form__label--dir">Apenas juros</label>
                   <input type="radio" name="type" value="interest" required id="interest" class="form__radio">
-                  <label for="interest" class="form__label form__label--extern">Apenas juros</label>
                </div>
             </fieldset>
 

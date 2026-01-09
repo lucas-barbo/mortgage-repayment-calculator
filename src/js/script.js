@@ -67,7 +67,7 @@ function showResult(monthly, total) {
 
 function waitResult() {
    sectionResult.innerHTML = `
-      <img src="src/img/calculator-mortgage.svg" alt="">
+      <img src="src/img/calculator-mortgage.svg" alt="imagem de uma calculadora">
       <h2 class="text--2 text--white text--center">Results shown here</h2>
       <p class="text--slate-300 text--center">Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>`
 }
