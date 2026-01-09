@@ -4,6 +4,12 @@
    gap: var(--spacing-300);
 }
 
+.form__header {
+   display: flex;
+   flex-direction: column;
+   gap: var(--spacing-100);
+}
+
 .form__fieldset {
    display: flex;
    flex-direction: column;
@@ -119,6 +125,19 @@
 }
 
 @media (width >= 48rem) {
+
+   .form__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--spacing-100);
+
+      width: 100%;
+
+      margin-bottom: var(--spacing-200);
+   }
+
    .form__fieldset--100-50 {
       width: calc(50% - var(--spacing-300) / 2);
    }

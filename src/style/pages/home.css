@@ -11,12 +11,6 @@
    padding: var(--spacing-400) var(--spacing-300);
 }
 
-.calculator__header {
-   display: flex;
-   flex-direction: column;
-   gap: var(--spacing-100);
-}
-
 .calculator__button {
    position: relative;
    width: fit-content;
@@ -70,12 +64,6 @@
       overflow: hidden;
 
       border-radius: 1.5rem;
-   }
-
-   .calculator__header {
-      flex-direction: row;
-      align-items: first baseline;
-      justify-content: space-between;
    }
 
    .calculator {
