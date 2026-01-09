@@ -7,6 +7,8 @@
    --slate-500: #6b94a8;
    --slate-300: #9abed5;
    --slate-100: #e4f4fd;
+   --bg-color: var(--slate-100);
+   --bg-result: rgba(0, 0, 0, 0.25);
 
    --font-family: "Plus Jakarta Sans", sans-serif;
 

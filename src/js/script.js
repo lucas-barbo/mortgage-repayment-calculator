@@ -1,12 +1,7 @@
 const sectionResult = document.querySelector("#result")
 const form = document.querySelector("#form")
 
-window.onload = waitResult()
-
-function clearForm() {
-   form.reset()
-   waitResult()
-}
+window.onload = showResult()
 
 form.onsubmit = (event) => {
    event.preventDefault()
@@ -66,12 +61,12 @@ function formatCurrency(value) {
 
 function showResult(monthly, total) {
    sectionResult.innerHTML = `
-      <h2 class="text--2 text--white">Your results</h2>
+      <h2 class="result__title text--2 text--white">Your results</h2>
       <p class="result__text text--slate-300">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
       <article class="result__box">
          <p class="text--slate-300">Your monthly repayments</p>
          <span class="text--1 text--lime">${monthly}</span>
-         <div></div>
+         <hr class="result__div">
          <p class="text--slate-300">Total you'll repay over the term</p>
          <span class="text--2 text--white">${total}</span>
       </article>`

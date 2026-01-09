@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+   font: inherit;
+   color: inherit;
+}
+
+html {
+   scroll-behavior: smooth;
+
+   font-family: var(--font-family);
+   font-size: 1rem;
+   font-weight: 500;
+   line-height: 150%;
+   color: var(--slate-700);
+}
+
+body {
+   align-content: center;
+   justify-items: center;
+
+   min-height: 100vh;
+
+   background-color: var(--bg-color);
+}
+
+button {
+   border: none;
+   background-color: transparent;
+}
+
+input {
+   border: none;
+   background-color: transparent;
+}
+
+input:focus {
+   outline: none;
+}
+
+@media (width >= 48rem) {
+   body {
+      padding: var(--spacing-500);
+   }
+}
